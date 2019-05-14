@@ -1,32 +1,11 @@
 #!/usr/bin/env bash
 
-DOTFILES_PATH=$HOME/.dotfiles
-GITHUB_REPO=https://github.com/keethealth/dotfiles.git
-GITHUB_NAME="Caresa Huddleston"
-GITHUB_USERNAME="caresa"
-GITHUB_EMAIL="caresa.huddleston@gmail.com"
-
 main() {
   splash
   # Cloning Dotfiles repository for install_packages_with_brewfile
   # to have access to Brewfile
-  if clone_dotfiles_repo; then
-    bash "${DOTFILES_PATH}/main.sh"
-  fi
-}
-
-install_homebrew() {
-  e_header "Installing Homebrew..."
-  if type_exists 'brew'; then
-    success "Homebrew already exists."
-  else
-    url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/homebrew_installer
-    if /usr/bin/ruby -e "$(curl -fsSL ${url})"; then
-      success "Homebrew installation succeeded."
-    else
-      error "Homebrew installation failed."
-      exit 1
-    fi
+  if source $HOME/.dot_env && clone_dotfiles_repo; then
+    source $HOME/.dot_env && bash "${DOTFILES_PATH}/main.sh"
   fi
 }
 

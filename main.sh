@@ -1,25 +1,17 @@
 #!/usr/bin/env bash
 
-DOTFILES_PATH=$HOME/.dotfiles
-GITHUB_REPO=https://github.com/bluengreen/dotfiles.git
-GITHUB_NAME="Phillip Novess"
-GITHUB_USERNAME="bluengreen"
-GITHUB_EMAIL="phillip@novess.com"
-
 # source $HOME/Library/init/utils.sh
 source "${DOTFILES_PATH}/utils.sh"
 
 main() {
   # Cloning Dotfiles repository for install_packages_with_brewfile
   # to have access to Brewfile
-  # clone_dotfiles_repo
-  # splash
 
   # First things first, asking for sudo credentials
   ask_for_sudo
 
   # Installing Homebrew, the basis of anything and everything
-  install_homebrew
+  # install_homebrew
 
   # Installing all packages in Dotfiles repository's Brewfile
   install_packages_with_brewfile
@@ -92,33 +84,6 @@ configure_git() {
      error "git configuration failed."
   fi
 }
-
-clone_dotfiles_repo() {
-  e_header "Cloning dotfiles repository into ${DOTFILES_PATH} ..."
-
-  if test -e $DOTFILES_PATH; then
-    substep "${DOTFILES_PATH} already exists."
-    pull_latest $DOTFILES_PATH
-  else
-    if git clone "$GITHUB_REPO" $DOTFILES_PATH; then
-      success "Cloned into ${DOTFILES_PATH}"
-    else
-      error "Cloning into ${DOTFILES_PATH} failed."
-      exit 1
-    fi
-  fi
-}
-
-pull_latest() {
-  e_header "Pulling latest changes in ${1} repository..."
-
-  if git -C $1 pull origin master &> /dev/null; then
-    success "Pull successful in ${1} repository."
-  else
-    error "Please pull the latest changes in ${1} repository manually."
-  fi
-}
-
 
 set_mac_defaults() {
   e_header "Updating macOS defaults..."
