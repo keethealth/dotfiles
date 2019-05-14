@@ -2,9 +2,9 @@
 
 DOTFILES_PATH=$HOME/.dotfiles
 GITHUB_REPO=https://github.com/keethealth/dotfiles.git
-GITHUB_NAME="You Are Here"
-GITHUB_USERNAME="dev"
-GITHUB_EMAIL="development@novess.com"
+GITHUB_NAME="Caresa Huddleston"
+GITHUB_USERNAME="caresa"
+GITHUB_EMAIL="caresa.huddleston@gmail.com"
 
 main() {
   splash
