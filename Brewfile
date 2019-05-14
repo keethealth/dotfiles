@@ -32,10 +32,10 @@ brew 'memcached'
 brew 'redis', restart_service: :changed
 brew 'rabbitmq'
 brew 'kafka'
-brew 'presto'
-brew 'apache-drill'
-brew 'influxdb'
-brew 'neo4j'
+# brew 'presto'
+# brew 'apache-drill'
+# brew 'influxdb'
+# brew 'neo4j'
 brew 'zookeeper'
 
 # media libs and tools
@@ -59,7 +59,7 @@ brew 'cli53'
 
 # install apps
 # cask install homebrew/cask-versions/java8
-cask 'java8'
+# cask 'java8'
 cask 'bbedit'
 cask 'atom'
 cask 'transmit'
@@ -68,9 +68,9 @@ cask 'docker'
 cask 'firefox'
 cask 'google-chrome'
 cask 'sequel-pro'
-cask 'vlc'
-cask 'iterm2'
-cask 'duet'
+# cask 'vlc'
+# cask 'iterm2'
+# cask 'duet'
 cask "postman"
 
 # Quicklook
@@ -82,7 +82,7 @@ cask 'qlstephen'
 cask 'qlvideo'
 
 # install mac app store apps via `mas`
-# mas 'Affinity Designer', id: 824171161
+mas 'Affinity Designer', id: 824171161
 mas 'Magnet', id: 441258766
-# mas 'SnippetsLab', id: 1006087419
-# mas 'Reeder', id: 880001334
+mas 'SnippetsLab', id: 1006087419
+mas 'Reeder', id: 880001334
