@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
 DOTFILES_PATH=$HOME/.dotfiles
-GITHUB_REPO=https://github.com/bluengreen/dotfiles.git
-GITHUB_NAME="Phillip Novess"
-GITHUB_USERNAME="bluengreen"
-GITHUB_EMAIL="phillip@novess.com"
+GITHUB_REPO=https://github.com/keethealth/dotfiles.git
+GITHUB_NAME="You Are Here"
+GITHUB_USERNAME="dev"
+GITHUB_EMAIL="development@novess.com"
 
 main() {
   splash
   # Cloning Dotfiles repository for install_packages_with_brewfile
   # to have access to Brewfile
-  if clone_dotfiles_repo; then 
+  if clone_dotfiles_repo; then
     bash "${DOTFILES_PATH}/main.sh"
   fi
 }
@@ -62,21 +62,21 @@ splash() {
 cat << "EOF"
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                                                                              │
-│                        ______ _____   _______ _______                        │██
-│                       |   __ \     |_|   |   |    ___|                       │██
-│                       |   __ <       |   |   |    ___|                       │██
-│                       |______/_______|_______|_______|                       │██
-│                                                                              │██
-│                                    _______                                   │██
-│                                   |    |  |                                  │██
-│                                   |       |                                  │██
-│                                   |__|____|                                  │██
-│                                                                              │██
-│                    _______ ______ _______ _______ _______                    │██
-│                   |     __|   __ \    ___|    ___|    |  |                   │██
-│                   |    |  |      <    ___|    ___|       |                   │██
-│                   |_______|___|__|_______|_______|__|____|                   │██
-│                                                                              │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
+│                               KEET DOT                                       │██
 └──────────────────────────────────────────────────────────────────────────────┘██
   ████████████████████████████████████████████████████████████████████████████████
   ████████████████████████████████████████████████████████████████████████████████
