@@ -9,6 +9,21 @@ main() {
   fi
 }
 
+install_homebrew() {
+  e_header "Installing Homebrew..."
+  if type_exists 'brew'; then
+    success "Homebrew already exists."
+  else
+    url=https://raw.githubusercontent.com/Sajjadhosn/dotfiles/master/installers/homebrew_installer
+    if /usr/bin/ruby -e "$(curl -fsSL ${url})"; then
+      success "Homebrew installation succeeded."
+    else
+      error "Homebrew installation failed."
+      exit 1
+    fi
+  fi
+}
+
 clone_dotfiles_repo() {
   echo "Cloning dotfiles repository into ${DOTFILES_PATH} ..."
 
