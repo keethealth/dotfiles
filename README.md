@@ -3,6 +3,18 @@
 
 ### Install
 
+Download the env vars file
+```
+curl -L https://raw.githubusercontent.com/keethealth/dotfiles/master/set_env.sh -o ~/.dot_env
+```
+
+Update the env vars for your github user and install
+ ```
+source ~/.dot_env && bash <(curl -fsSL https://raw.githubusercontent.com/keethealth/dotfiles/pn/dot/install)
+```
+
+
+### Update / Run the dotfiles locally
 Clone the repo
 
 ```
