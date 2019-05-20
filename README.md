@@ -10,7 +10,7 @@ curl -L https://raw.githubusercontent.com/keethealth/dotfiles/master/set_env.sh 
 
 Update the env vars for your github user and install
  ```
-source ~/.dot_env && bash <(curl -fsSL https://raw.githubusercontent.com/keethealth/dotfiles/pn/dot/install)
+source ~/.dot_env && bash <(curl -fsSL https://raw.githubusercontent.com/keethealth/dotfiles/master/install)
 ```
 
 
