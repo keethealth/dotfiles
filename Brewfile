@@ -1,9 +1,12 @@
 
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
-tap 'homebrew/bundle'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "AdoptOpenJDK/openjdk"
 
 # utitlities
 brew 'wget'
@@ -19,7 +22,6 @@ brew 'gnupg2'
 brew 'mas'
 brew 'openssl'
 brew 'jq'
-brew 'midnight-commander'
 brew 'httpie'
 cask 'betterzip'
 
@@ -42,8 +44,8 @@ brew 'zookeeper'
 brew 'ghostscript'
 brew 'imagemagick'
 brew 'fdk-aac'
-# brew "ffmpeg", args: ["build-from-source", "with-fdk-aac", "with-ffplay", "with-freetype", "with-libass", "with-libquvi", "with-libvorbis", "with-libvpx", "with-opus", "with-x265", "with-openh264"]
-brew "ffmpeg"
+brew "ffmpeg", args: ["build-from-source", "with-fdk-aac", "with-ffplay", "with-freetype", "with-libass", "with-libquvi", "with-libvorbis", "with-libvpx", "with-opus", "with-x265", "with-openh264"]
+# brew "ffmpeg"
 brew 'media-info'
 brew 'youtube-dl'
 
@@ -58,15 +60,14 @@ brew 'awslogs'
 brew 'cli53'
 
 # install apps
-# cask install homebrew/cask-versions/java8
-# cask 'java8'
+cask "AdoptOpenJDK/openjdk/adoptopenjdk8"
 cask 'bbedit'
 cask 'atom'
 cask 'transmit'
-# cask 'slack'
+cask 'slack'
 cask 'docker'
-# cask 'firefox'
-# cask 'google-chrome'
+cask 'firefox'
+cask 'homebrew/cask-versions/google-chrome-beta'
 cask 'sequel-pro'
 # cask 'vlc'
 # cask 'iterm2'
@@ -82,7 +83,6 @@ cask 'qlstephen'
 cask 'qlvideo'
 
 # install mac app store apps via `mas`
-# mas 'Affinity Designer', id: 824171161
-# mas 'Magnet', id: 441258766
-# mas 'SnippetsLab', id: 1006087419
-# mas 'Reeder', id: 880001334
+mas 'Affinity Designer', id: 824171161
+mas 'Magnet', id: 441258766
+mas 'SnippetsLab', id: 1006087419
