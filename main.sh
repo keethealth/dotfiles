@@ -36,7 +36,6 @@ main() {
   gem_install "${gem_packages[@]}"
 
   bash_profile_install
-
 }
 
 ssh_key_gen() {
@@ -127,7 +126,7 @@ install_node() {
       # Install NODE
       curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
 
-	  source ~/.bashrc
+      source ~/.bashrc
 
       # install stable version of node
       nvm install stable
@@ -160,7 +159,6 @@ yarn_install() {
             fi
         fi
     done
-
 }
 
 gem_install() {
@@ -187,10 +185,7 @@ bash_profile_install() {
 	cat ~/.dotfiles/bash_profile.sh > ~/.bash_profile
 
 	source ~/.bash_profile
-
 	success "bash_profile installation succeeded."
-
-
 }
 
 main "$@"
