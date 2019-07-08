@@ -61,12 +61,10 @@ quit() {
     killall "$app" > /dev/null 2>&1
 }
 
-
 # link_files(){
 #   # cp /Volumes/pnovess/Library/Preferences/com.barebones.bbedit.plist ~/Library/Preferences/com.barebones.bbedit.plist
 #   # cp -R /Volumes/pnovess/Library/BBEdit ~/Library/BBEdit
 #   # cp -R /Volumes/pnovess/Library/Application\ Support/BBEdit/  ~/Library/Application\ Support/BBEdit/
 # }
-
 
 main "$@"
