@@ -23,6 +23,7 @@ brew 'httpie'
 cask 'betterzip'
 
 # databases and tools
+cask 'homebrew/cask-versions/adoptopenjdk8'
 brew 'mysql'
 brew 'postgresql', restart_service: :changed
 brew 'pgcli'
@@ -70,7 +71,7 @@ cask 'sequel-pro'
 # cask 'vlc'
 # cask 'iterm2'
 # cask 'duet'
-cask "postman"
+cask 'postman'
 
 # Quicklook
 cask 'qlcolorcode'
