@@ -51,11 +51,11 @@ ssh_key_gen() {
     eval "$(ssh-agent -s)"
 
     # # If OSX 10.12+
-    echo 'Host *
+    echo "Host *
      AddKeysToAgent yes
      UseKeychain yes
      IdentityFile $HOME/.ssh/${GITHUB_USERNAME}_id_rsa
-    ' >> $HOME/.ssh/config
+    " >> $HOME/.ssh/config
   fi
 }
 
