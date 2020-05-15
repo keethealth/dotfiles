@@ -1,8 +1,7 @@
 
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 
 # utitlities
@@ -24,6 +23,7 @@ brew 'httpie'
 cask 'betterzip'
 
 # databases and tools
+cask 'homebrew/cask-versions/adoptopenjdk8'
 brew 'mysql'
 brew 'postgresql', restart_service: :changed
 brew 'pgcli'
@@ -71,7 +71,7 @@ cask 'sequel-pro'
 # cask 'vlc'
 # cask 'iterm2'
 # cask 'duet'
-cask "postman"
+cask 'postman'
 
 # Quicklook
 cask 'qlcolorcode'
