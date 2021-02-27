@@ -30,7 +30,7 @@ $ cp set_env.sh $HOME/.dot_env
 
 Update the default variables
 ```
-export DOTFILES_PATH=$HOME/.dotfiles
+export DOTFILES_PATH=$HOME/dotfiles
 export GITHUB_REPO=https://github.com/keethealth/dotfiles.git
 export GITHUB_NAME="Your Name"
 export GITHUB_USERNAME="github_username"
@@ -53,16 +53,43 @@ $ source $HOME/.dot_env && bash install.sh
 ```
 chsh -s /bin/bash
 ```
+
+#### Install Rosetta
+
+```
 softwareupdate --install-rosetta
+```
+
+#### Create Rosetta Terminal
+
+Duplicate the terminal app and set to run in rosetta.
+Use that version of the terminal app to setup dev environment.
+
+https://dev.to/courier/tips-and-tricks-to-setup-your-apple-m1-for-development-547g
+
+
+#### Run dotfiles  
+
+```
 cd dotfiles/
 cp set_env.sh $HOME/.dot_env
-source ~/.dot_env && bash main.sh
+source ~/.dot_env && bash install.sh
+```
+
+#### Silence Mac Warning
+
+If using bash shell, silence the warnings.
+
+Add to `~/.bash_profile`
+
+```
+export BASH_SILENCE_DEPRECATION_WARNING=1
 ```
 
 #### Docker
 
 Install Docker for M1
 
-https://docs.docker.com/docker-for-mac/apple-m1/
+*** only preview available
 
-####
+https://docs.docker.com/docker-for-mac/apple-m1/
