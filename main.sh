@@ -184,7 +184,7 @@ gem_install() {
 
 bash_profile_install() {
 	e_header "Update bash_profile..."
-	cat ~/.dotfiles/bash_profile.sh > ~/.bash_profile
+	cat "${DOTFILES_PATH}/bash_profile.sh" > ~/.bash_profile
 
 	source ~/.bash_profile
 

@@ -25,7 +25,7 @@ $ cd dotfiles/
 Set up local env vars
 
 ```
-$ cp set_env.sh $HOME/.dot_env.sh
+$ cp set_env.sh $HOME/.dot_env
 ```
 
 Update the default variables
@@ -41,5 +41,28 @@ Install brew
 
 ```
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ source $HOME/.dot_env.sh && bash install.sh  
+$ source $HOME/.dot_env && bash install.sh  
 ```
+
+
+
+## Big Sur & M1 Macs
+
+#### Change Shell to BASH
+
+```
+chsh -s /bin/bash
+```
+softwareupdate --install-rosetta
+cd dotfiles/
+cp set_env.sh $HOME/.dot_env
+source ~/.dot_env && bash main.sh
+```
+
+#### Docker
+
+Install Docker for M1
+
+https://docs.docker.com/docker-for-mac/apple-m1/
+
+####

@@ -18,25 +18,25 @@ brew 'gnupg2'
 brew 'mas'
 brew 'openssl'
 brew 'jq'
-brew 'midnight-commander'
+# brew 'midnight-commander'
 brew 'httpie'
 cask 'betterzip'
 
 # databases and tools
-cask 'homebrew/cask-versions/adoptopenjdk8'
+# cask 'homebrew/cask-versions/adoptopenjdk8'
 brew 'mysql'
 brew 'postgresql', restart_service: :changed
 brew 'pgcli'
-brew 'mongodb'
-brew 'memcached'
+# brew 'mongodb'
+# brew 'memcached'
 brew 'redis', restart_service: :changed
 brew 'rabbitmq'
-brew 'kafka'
+# brew 'kafka'
 # brew 'presto'
 # brew 'apache-drill'
 # brew 'influxdb'
 # brew 'neo4j'
-brew 'zookeeper'
+# brew 'zookeeper'
 
 # media libs and tools
 brew 'ghostscript'
@@ -49,10 +49,10 @@ brew 'youtube-dl'
 
 # aws tools
 brew 'awscli'
-brew 'aws-elasticbeanstalk'
+# brew 'aws-elasticbeanstalk'
 brew 'amazon-ecs-cli'
 brew 'chamber'
-brew 'terraform'
+brew 'tfenv'
 brew 's3cmd'
 brew 'awslogs'
 brew 'cli53'
@@ -62,12 +62,12 @@ brew 'cli53'
 # cask 'java8'
 cask 'bbedit'
 cask 'atom'
-cask 'transmit'
+# cask 'transmit'
 # cask 'slack'
 cask 'docker'
 # cask 'firefox'
 # cask 'google-chrome'
-cask 'sequel-pro'
+# cask 'sequel-pro'
 # cask 'vlc'
 # cask 'iterm2'
 # cask 'duet'
@@ -82,7 +82,7 @@ cask 'qlstephen'
 cask 'qlvideo'
 
 # install mac app store apps via `mas`
-# mas 'Affinity Designer', id: 824171161
-# mas 'Magnet', id: 441258766
+mas 'Affinity Designer', id: 824171161
+mas 'Magnet', id: 441258766
 # mas 'SnippetsLab', id: 1006087419
 # mas 'Reeder', id: 880001334
