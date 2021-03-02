@@ -38,6 +38,12 @@ alias gl='git pull'
 alias gp='git push'
 
 #############################################
+# SILENCE MAC WARNINGS
+#############################################
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+#############################################
 # update path for mysql
 #############################################
 # export PATH=$PATH:/usr/local/mysql/bin:/usr/local/share/npm/bin
@@ -53,4 +59,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #############################################
 # NVM - for managing versions of node
 #############################################
-[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc" # Load .bashrc for nvm 
+[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc" # Load .bashrc for nvm
