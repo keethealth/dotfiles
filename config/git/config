@@ -1,0 +1,24 @@
+[user]
+	name = GITHUB_NAME
+	email = GITHUB_EMAIL
+
+[color]
+	ui = auto
+[color "branch"]
+	current = auto
+	local = auto
+	remote = auto
+[color "diff"]
+	meta = auto
+	frag = auto
+	old = auto
+	new = auto
+[color "status"]
+	added = auto
+	changed = auto
+	untracked = auto
+[color "diff-highlight"]
+	oldNormal = auto
+	oldHighlight = auto
+	newNormal = auto
+	newHighlight = auto
