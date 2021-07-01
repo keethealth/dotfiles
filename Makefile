@@ -5,6 +5,8 @@ NVM_DIR := $(HOME)/.nvm
 RVM_DIR := $(HOME)/.rvm
 RUBY_VERSION=2.5.5
 
+export XDG_CONFIG_HOME = $(HOME)/.config
+export STOW_DIR = $(DOTFILES_DIR)
 define HEADER
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                                                                              │
@@ -24,7 +26,10 @@ endef
 
 export HEADER
 
-setup: splash sudo core packages
+setup: splash sudo core packages defaults xs link
+
+xs:
+	. $(DOTFILES_DIR)/macos/xcode
 
 sudo:
 	@echo "Prompting for sudo password..."
@@ -66,3 +71,13 @@ gems:
 defaults:
 	@echo "Writing MacOS defaults"
 	. $(DOTFILES_DIR)/macos/defaults
+
+stow-macos: brew
+	is-executable stow || brew install stow
+
+link: stow-macos
+	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
+		mv -v $(HOME)/$$FILE{,.bak}; fi; done
+	mkdir -p $(XDG_CONFIG_HOME)
+	stow -t $(HOME) runcom
+	stow -t $(XDG_CONFIG_HOME) config
