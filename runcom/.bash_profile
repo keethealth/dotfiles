@@ -47,10 +47,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #############################################
 # RVM - for managing versions of ruby
 #############################################
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-#############################################
-# NVM - for managing versions of node
-#############################################
-[[ -s "$HOME/.bashrc" ]] && source "$HOME/.bashrc" # Load .bashrc for nvm 
